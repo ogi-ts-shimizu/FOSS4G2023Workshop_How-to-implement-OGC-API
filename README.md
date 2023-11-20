@@ -38,7 +38,7 @@ docker exec mf-api-server ./run.sh
 ---
 ## <30 mins> Verify that each API works properly using Swagger
 ## Moving Feature Collection
-#### **[POST]** Moving Feature Collection
+#### No.1 **[POST]** Moving Feature Collection
 
 Request body(application/json)
 ```json
@@ -49,13 +49,13 @@ Request body(application/json)
 }
 ```
 ---
-#### **[GET]** Moving Feature Collection
+#### No.2 **[GET]** Moving Feature Collection
 collectionID
 > [!NOTE] 
 > * The last part of `location` link when POST response
 ![image](https://github.com/ogi-ts-shimizu/FOSS4G2023Workshop_How-to-implement-OGC-API/assets/120169253/934a7555-a796-4289-a7bf-a18d4c962204)
 ---
-#### **[PUT]** Moving Feature Collection
+#### No.3 **[PUT]** Moving Feature Collection
 collectionID : The last part of `location` link when POST response
 
 Request body(application/json)
@@ -67,13 +67,13 @@ Request body(application/json)
 }
 ```
 ---
-#### **[DELETE]** Moving Feature Collection
+#### No.4 **[DELETE]** Moving Feature Collection
 > [!NOTE] 
 > Skip the DELETE request for the next demonstration
 
 ---
 ## Moving Feature
-#### **[POST]** Moving Features
+#### No.5 **[POST]** Moving Features
 collectionID : ID of the response at the time of **Moving Feature Collection**
 
 Request body(application/json) : 
@@ -238,7 +238,7 @@ Request body(application/json) :
 ```
 
 ---
-#### **[GET]** Moving Features (/collections/{collectionId}/items)
+#### No.6 **[GET]** Moving Features (/collections/{collectionId}/items)
 collectionID : ID of the response at the time of **Moving Feature Collection**
 
 datetime : Empty
@@ -247,19 +247,19 @@ limit : 10
 
 ---
 
-#### **[GET]** Moving Features (/collections/{collectionId}/items/{mFeatureId})
+#### No.7 **[GET]** Moving Features (/collections/{collectionId}/items/{mFeatureId})
 collectionId : ID of the response at the time of **Moving Feature Collection**
 mFeatureId
 > [!NOTE]
 > The last part of `location` link when Moving Features POST response
 ![image](https://github.com/ogi-ts-shimizu/FOSS4G2023Workshop_How-to-implement-OGC-API/assets/120169253/c609d523-6f45-40b8-aec1-9b6903a8797f)
 ---
-#### **[DELETE]** Moving Features (/collections/{collectionId}/items/{mFeatureId})
+#### No.8 **[DELETE]** Moving Features (/collections/{collectionId}/items/{mFeatureId})
 > [!NOTE] 
 > Skip the DELETE request for the next demonstration
 ---
 ## TemporalGeometryCollection
-#### **[POST]** Temporal Geometry(/collections/{collectionId}/items/{mFeatureId}/tGeometries)
+#### No.9 **[POST]** Temporal Geometry(/collections/{collectionId}/items/{mFeatureId}/tGeometries)
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
@@ -267,7 +267,7 @@ mFeatureId : ID of the response at the time of **Moving Features**
 Request body(application/json) : **Default Value**
 
 ---
-#### **[GET]** Temporal Geometry(/collections/{collectionId}/items/{mFeatureId}/tGeometries)
+#### No.10 **[GET]** Temporal Geometry(/collections/{collectionId}/items/{mFeatureId}/tGeometries)
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
@@ -281,7 +281,7 @@ datetime : Empty
 limit : 10
 
 ---
-#### **[DELETE]** Temporal Geometry(/collections/{collectionId}/items/{mFeatureId}/tGeometries/{tGeometryId})
+#### No.11 **[DELETE]** Temporal Geometry(/collections/{collectionId}/items/{mFeatureId}/tGeometries/{tGeometryId})
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
@@ -294,7 +294,7 @@ tGeometryId :
 
 ---
 ## TemporalPropertyCollection
-#### **[POST]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties)
+#### No.12 **[POST]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties)
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
@@ -302,7 +302,7 @@ mFeatureId : ID of the response at the time of **Moving Features**
 Request body(application/json)  : Default Value
 
 ---
-#### **[POST]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
+#### No.13 **[POST]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
@@ -313,7 +313,7 @@ Request body(application/json) : Default Value
 
 ---
 
-#### **[GET]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
+#### No.14 **[GET]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
@@ -327,7 +327,7 @@ datetime : Empty
 limit : 10
 
 ---
-#### **[DELETE]** Temporal Property(/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
+#### No.15 **[DELETE]** Temporal Property(/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
