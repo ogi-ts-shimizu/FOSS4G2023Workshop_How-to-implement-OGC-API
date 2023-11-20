@@ -318,7 +318,7 @@ collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
 
-tPropertyName : ID of the response at the time of **Temporal Property**
+tPropertyName : length
 
 leaf : Empty
 
@@ -332,7 +332,7 @@ collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
 
-tPropertyName : ID of the response at the time of **Temporal Property**
+tPropertyName : length
 
 ---
 
