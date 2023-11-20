@@ -76,7 +76,166 @@ Request body(application/json)
 #### **[POST]** Moving Features
 collectionID : ID of the response at the time of **Moving Feature Collection**
 
-Request body(application/json) : **Default Value**
+Request body(application/json) : 
+```json
+{
+  "type": "Feature",
+  "id": "mf-1",
+  "properties": {
+    "name": "car1",
+    "state": "test1",
+    "video": "http://.../example/video.mpeg"
+  },
+  "crs": {
+    "type": "Name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "trs": {
+    "type": "Link",
+    "properties": {
+      "type": "ogcdef",
+      "href": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+    }
+  },
+  "temporalGeometry": {
+    "type": "MovingPoint",
+    "datetimes": [
+      "2011-07-14T22:01:01.000Z",
+      "2011-07-14T22:01:02.000Z",
+      "2011-07-14T22:01:03.000Z",
+      "2011-07-14T22:01:04.000Z",
+      "2011-07-14T22:01:05.000Z"
+    ],
+    "coordinates": [
+      [
+        139.757083,
+        35.627701,
+        0.5
+      ],
+      [
+        139.757399,
+        35.627701,
+        2
+      ],
+      [
+        139.757555,
+        35.627688,
+        4
+      ],
+      [
+        139.757651,
+        35.627596,
+        4
+      ],
+      [
+        139.757716,
+        35.627483,
+        4
+      ]
+    ],
+    "interpolation": "Linear",
+    "base": {
+      "type": "glTF",
+      "href": "http://.../example/car3dmodel.gltf"
+    },
+    "orientations": [
+      {
+        "scales": [
+          1,
+          1,
+          1
+        ],
+        "angles": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "scales": [
+          1,
+          1,
+          1
+        ],
+        "angles": [
+          0,
+          355,
+          0
+        ]
+      },
+      {
+        "scales": [
+          1,
+          1,
+          1
+        ],
+        "angles": [
+          0,
+          0,
+          330
+        ]
+      },
+      {
+        "scales": [
+          1,
+          1,
+          1
+        ],
+        "angles": [
+          0,
+          0,
+          300
+        ]
+      },
+      {
+        "scales": [
+          1,
+          1,
+          1
+        ],
+        "angles": [
+          0,
+          0,
+          270
+        ]
+      }
+    ]
+  },
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        139.757083,
+        35.627701,
+        0.5
+      ],
+      [
+        139.757399,
+        35.627701,
+        2
+      ],
+      [
+        139.757555,
+        35.627688,
+        4
+      ],
+      [
+        139.757651,
+        35.627596,
+        4
+      ],
+      [
+        139.757716,
+        35.627483,
+        4
+      ]
+    ]
+  }
+}
+
+```
 
 ---
 #### **[GET]** Moving Features (/collections/{collectionId}/items)
@@ -140,7 +299,7 @@ collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
 
-Request body(application/json) : **Default Value**
+Request body(application/json)  : Default Value
 
 ---
 #### **[POST]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
@@ -148,13 +307,12 @@ collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
 
-tPropertyName
-> [!NOTE] 
-> * The last part of `location` link when POST response
+tPropertyName : length
 
-Request body(application/json) : **Default Value**
+Request body(application/json) : Default Value
 
 ---
+
 #### **[GET]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
