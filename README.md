@@ -5,7 +5,8 @@ Each section describes the commands and sample data used.
 ## Recommended PC specifications
 - [x] HDD：At least 20GB free space
 - [x] memory >= 6GB
-- [x] Install Docker on local PC (https://www.docker.com/get-started)
+- [x] Install **Docker** on local PC (https://www.docker.com/get-started)
+- [x] (optional) Database Viewer **DBeaver** (https://dbeaver.io/)
 
 ---
 ## <5 mins> A brief explanation of pygeoapi (overall architecture, etc.) and install MF-API Server (using Docker)
