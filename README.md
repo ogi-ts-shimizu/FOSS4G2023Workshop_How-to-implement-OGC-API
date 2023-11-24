@@ -582,7 +582,9 @@ subTrajectory : true
 ### No.7
 #### **[GET]** Moving Features (/collections/{collectionId}/items/{mFeatureId})
 collectionId : ID of the response at the time of **Moving Feature Collection**
-mFeatureId
+
+mFeatureId : ID of the response at the time of **Moving Feature**
+
 > [!NOTE]
 > The last part of `location` link when Moving Features POST response
 ![image](https://github.com/ogi-ts-shimizu/FOSS4G2023Workshop_How-to-implement-OGC-API/assets/120169253/c609d523-6f45-40b8-aec1-9b6903a8797f)
@@ -627,9 +629,11 @@ leaf : Empty
 
 bbox : Empty
 
-datetime : ```2011-08-14T22:15:00.000Z/2011-08-14T23:15:00.000Z```
+datetime : ```2011-08-14T22:15:00Z/2011-08-14T23:15:00Z```
 
 limit : 10
+
+subTrajectory : true
 
 ---
 ### No.11
@@ -638,16 +642,19 @@ collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
 
-tGeometryId :
+tGeometryId : ID of the response at the time of **TemporalGeometry**
+
 > [!NOTE] 
 > * The last part of `location` link when POST response
 ![image](https://github.com/ogi-ts-shimizu/FOSS4G2023Workshop_How-to-implement-OGC-API/assets/120169253/d394eedd-efbe-4c97-845a-e5e909d4dd4b)
 
 
+
+
 ---
 ## TemporalPropertyCollection
 ### No.12
-#### **[POST]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties)
+#### **[POST]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tproperties)
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
@@ -658,7 +665,7 @@ Request body(application/json)  : Default Value
 ---
 
 ### No.13
-#### **[GET]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
+#### **[GET]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tproperties/)
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
@@ -667,13 +674,34 @@ tPropertyName : length
 
 leaf : Empty
 
-datetime : Empty
+datetime : ```2011-08-14T22:15:00Z/2011-08-14T23:15:00Z```
 
 limit : 10
 
+subTemporalValue : true
+
 ---
+
+
 ### No.14
-#### **[POST]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
+#### **[GET]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tproperties/{tPropertyName})
+collectionId : ID of the response at the time of **Moving Feature Collection**
+
+mFeatureId : ID of the response at the time of **Moving Features**
+
+tPropertyName : length
+
+leaf : Empty
+
+datetime :  Empty
+
+limit : 10
+
+subTemporalValue : --
+
+---
+### No.15
+#### **[POST]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tproperties/{tPropertyName})
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
@@ -684,8 +712,8 @@ Request body(application/json) : Default Value
 
 
 ---
-### No.15
-#### **[DELETE]** Temporal Property(/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
+### No.16
+#### **[DELETE]** Temporal Property(/collections/{collectionId}/items/{mFeatureId}/tproperties/{tPropertyName})
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
