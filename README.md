@@ -205,9 +205,9 @@ Request body(application/json) :
   "temporalProperties": [
     {
       "datetimes": [
-        "2011-08-14T22:01:01.450Z",
-        "2011-08-14T23:01:01.450Z",
-        "2011-08-15T00:01:01.450Z"
+        "2011-08-14T22:01:01Z",
+        "2011-08-14T23:01:01Z",
+        "2011-08-15T00:01:01Z"
       ],
       "length": {
         "type": "Measure",
@@ -434,9 +434,9 @@ Request body(application/json) :
   "temporalProperties": [
     {
       "datetimes": [
-        "2011-07-14T22:01:01.450Z",
-        "2011-07-14T23:01:01.450Z",
-        "2011-07-15T00:01:01.450Z"
+        "2011-07-14T22:01:01Z",
+        "2011-07-14T23:01:01Z",
+        "2011-07-15T00:01:01Z"
       ],
       "length": {
         "type": "Measure",
@@ -541,7 +541,7 @@ collectionID : ID of the response at the time of **Moving Feature Collection**
 
 bbox : Empty
 
-datetime : ```2011-08-14T22:20:00.000Z```
+datetime : ```2011-08-14T22:20:00Z```
 
 limit : 10
 
@@ -562,20 +562,22 @@ datetime : Empty
 limit : 10
 
 subTrajectory : --
+
 ---
+
 ### No.6-3
 #### **[GET]** Moving Features (/collections/{collectionId}/items)
 collectionID : ID of the response at the time of **Moving Feature Collection**
 
 bbox : Empty
 
-datetime : ```2011-08-14T22:15:00.000Z/2011-08-14T23:15:00.000Z```
+datetime : ```2011-08-14T22:15:00Z/2011-08-14T23:15:00Z```
 
 limit : 10
 
 subTrajectory : true
----
 
+---
 
 ### No.7
 #### **[GET]** Moving Features (/collections/{collectionId}/items/{mFeatureId})
@@ -606,7 +608,7 @@ collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
 
-leaf : ```2011-08-14T22:30:00.000Z```
+leaf : ```2011-08-14T22:30:00Z```
 
 bbox : Empty
 
