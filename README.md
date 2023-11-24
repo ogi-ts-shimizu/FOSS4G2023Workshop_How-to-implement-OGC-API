@@ -417,7 +417,7 @@ collectionID : ID of the response at the time of **Moving Feature Collection**
 
 bbox : Empty
 
-datetime : 2011-07-14T22:20:00.000Z
+datetime : ```2011-07-14T22:20:00.000Z```
 
 limit : 10
 
