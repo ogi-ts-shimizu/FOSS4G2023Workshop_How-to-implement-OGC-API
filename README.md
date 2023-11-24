@@ -751,7 +751,6 @@ leaf : Empty
 
 datetime :  ```2010-01-01T00:00:00Z/..```
 
-limit : 10
 
 subTemporalValue : true
 
