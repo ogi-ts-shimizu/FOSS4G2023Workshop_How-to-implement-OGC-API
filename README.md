@@ -247,11 +247,40 @@ Request body(application/json) :
 #### **[GET]** Moving Features (/collections/{collectionId}/items)
 collectionID : ID of the response at the time of **Moving Feature Collection**
 
+bbox : Empty
+
+datetime : 2011-07-14T22:20:00.000Z
+
+limit : 10
+
+subTrajectory : --
+
+---
+### No.6-2
+#### **[GET]** Moving Features (/collections/{collectionId}/items)
+collectionID : ID of the response at the time of **Moving Feature Collection**
+
+bbox : xxxx
+
 datetime : Empty
 
 limit : 10
 
+subTrajectory : --
 ---
+### No.6-3
+#### **[GET]** Moving Features (/collections/{collectionId}/items)
+collectionID : ID of the response at the time of **Moving Feature Collection**
+
+bbox : Empty
+
+datetime : 2011-07-14T22:15:00.000Z/2011-07-14T23:15:00.000Z
+
+limit : 10
+
+subTrajectory : true
+---
+
 
 ### No.7
 #### **[GET]** Moving Features (/collections/{collectionId}/items/{mFeatureId})
@@ -268,7 +297,7 @@ mFeatureId
 ---
 ## TemporalGeometryCollection
 ### No.9
-#### **[POST]** Temporal Geometry(/collections/{collectionId}/items/{mFeatureId}/tGeometries)
+#### **[POST]** Temporal Geometry(/collections/{collectionId}/items/{mFeatureId}/tgsequence)
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
