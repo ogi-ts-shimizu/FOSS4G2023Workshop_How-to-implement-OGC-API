@@ -207,7 +207,7 @@ Request body(application/json) :
       "datetimes": [
         "2011-08-14T22:10:00Z",
         "2011-08-14T22:30:00Z",
-        "2011-08-14T22:00:00Z"
+        "2011-08-14T23:00:00Z"
       ],
       "length": {
         "type": "Measure",
