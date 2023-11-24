@@ -754,7 +754,7 @@ datetime :  ```2010-01-01T00:00:00Z/..```
 
 limit : 10
 
-subTemporalValue : --
+subTemporalValue : true
 
 ---
 ### No.15
