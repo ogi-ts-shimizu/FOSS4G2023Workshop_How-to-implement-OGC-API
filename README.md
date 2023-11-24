@@ -693,8 +693,8 @@ Request body(application/json)  :
     },
     {
       "datetimes": [
-        1465621836590,
-        1465711536300
+        1466380800000,
+        1466383800000
       ],
       "camera": {
         "type": "Image",
