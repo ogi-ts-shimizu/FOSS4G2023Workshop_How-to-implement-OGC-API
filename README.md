@@ -243,6 +243,174 @@ Request body(application/json) :
 ```
 
 ---
+
+### No.5-2
+#### **[POST]** Moving Features
+collectionID : ID of the response at the time of **Moving Feature Collection**
+
+Request body(application/json) : 
+```json
+{
+  "type": "Feature",
+  "id": "mf-1",
+  "properties": {
+    "name": "car1",
+    "state": "test1",
+    "video": "http://.../example/video.mpeg"
+  },
+  "crs": {
+    "type": "Name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "trs": {
+    "type": "Link",
+    "properties": {
+      "type": "ogcdef",
+      "href": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+    }
+  },
+  "temporalGeometry": {
+    "type": "MovingPoint",
+    "datetimes": [
+      "2012-07-14T22:10:00.000Z",
+      "2012-07-14T22:20:00.000Z",
+      "2012-07-14T22:30:00.000Z",
+      "2012-07-14T23:00:00.000Z",
+      "2012-07-14T23:50:00.000Z"
+    ],
+    "coordinates": [
+      [
+        138.757083,
+        34.627701,
+        0.5
+      ],
+      [
+        138.757399,
+        34.627701,
+        2
+      ],
+      [
+        138.757555,
+        34.627688,
+        4
+      ],
+      [
+        138.757651,
+        34.627596,
+        4
+      ],
+      [
+        138.757716,
+        34.627483,
+        4
+      ]
+    ],
+    "interpolation": "Linear",
+    "base": {
+      "type": "glTF",
+      "href": "http://.../example/car3dmodel.gltf"
+    },
+    "orientations": [
+      {
+        "scales": [
+          1,
+          1,
+          1
+        ],
+        "angles": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "scales": [
+          1,
+          1,
+          1
+        ],
+        "angles": [
+          0,
+          355,
+          0
+        ]
+      },
+      {
+        "scales": [
+          1,
+          1,
+          1
+        ],
+        "angles": [
+          0,
+          0,
+          330
+        ]
+      },
+      {
+        "scales": [
+          1,
+          1,
+          1
+        ],
+        "angles": [
+          0,
+          0,
+          300
+        ]
+      },
+      {
+        "scales": [
+          1,
+          1,
+          1
+        ],
+        "angles": [
+          0,
+          0,
+          270
+        ]
+      }
+    ]
+  },
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        138.757083,
+        34.627701,
+        0.5
+      ],
+      [
+        138.757399,
+        34.627701,
+        2
+      ],
+      [
+        138.757555,
+        34.627688,
+        4
+      ],
+      [
+        138.757651,
+        34.627596,
+        4
+      ],
+      [
+        138.757716,
+        34.627483,
+        4
+      ]
+    ]
+  }
+}
+
+```
+
+---
+
 ### No.6
 #### **[GET]** Moving Features (/collections/{collectionId}/items)
 collectionID : ID of the response at the time of **Moving Feature Collection**
