@@ -727,7 +727,6 @@ collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
 
-tPropertyName : length
 
 leaf : Empty
 
