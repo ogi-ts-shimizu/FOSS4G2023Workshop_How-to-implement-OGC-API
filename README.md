@@ -85,12 +85,6 @@ Request body(application/json) :
 ```json
 {
   "type": "Feature",
-  "id": "mf-1",
-  "properties": {
-    "name": "car1",
-    "state": "test1",
-    "video": "http://.../example/video.mpeg"
-  },
   "crs": {
     "type": "Name",
     "properties": {
@@ -100,18 +94,18 @@ Request body(application/json) :
   "trs": {
     "type": "Link",
     "properties": {
-      "type": "ogcdef",
+      "type": "OGCDEF",
       "href": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
     }
   },
   "temporalGeometry": {
     "type": "MovingPoint",
     "datetimes": [
-      "2011-07-14T22:10:00Z",
-      "2011-07-14T22:20:00Z",
-      "2011-07-14T22:30:00Z",
-      "2011-07-14T23:00:00Z",
-      "2011-07-14T23:50:00Z"
+      "2011-07-14T22:01:01Z",
+      "2011-07-14T22:01:02Z",
+      "2011-07-14T22:01:03Z",
+      "2011-07-14T22:01:04Z",
+      "2011-07-14T22:01:05Z"
     ],
     "coordinates": [
       [
@@ -143,7 +137,7 @@ Request body(application/json) :
     "interpolation": "Linear",
     "base": {
       "type": "glTF",
-      "href": "http://.../example/car3dmodel.gltf"
+      "href": "http://www.opengis.net/spec/movingfeatures/json/1.0/prism/example/car3dmodel.gltf"
     },
     "orientations": [
       {
@@ -208,6 +202,57 @@ Request body(application/json) :
       }
     ]
   },
+  "temporalProperties": [
+    {
+      "datetimes": [
+        "2011-07-14T22:01:01.450Z",
+        "2011-07-14T23:01:01.450Z",
+        "2011-07-15T00:01:01.450Z"
+      ],
+      "length": {
+        "type": "Measure",
+        "form": "http://www.qudt.org/qudt/owl/1.0.0/quantity/Length",
+        "values": [
+          1,
+          2.4,
+          1
+        ],
+        "interpolation": "Linear"
+      },
+      "discharge": {
+        "type": "Measure",
+        "form": "MQS",
+        "values": [
+          3,
+          4,
+          5
+        ],
+        "interpolation": "Step"
+      }
+    },
+    {
+      "datetimes": [
+        1465621816590,
+        1465711526300
+      ],
+      "camera": {
+        "type": "Image",
+        "values": [
+          "http://www.opengis.net/spec/movingfeatures/json/1.0/prism/example/image1",
+          "iVBORw0KGgoAAAANSUhEU......"
+        ],
+        "interpolation": "Discrete"
+      },
+      "labels": {
+        "type": "Text",
+        "values": [
+          "car",
+          "human"
+        ],
+        "interpolation": "Discrete"
+      }
+    }
+  ],
   "geometry": {
     "type": "LineString",
     "coordinates": [
@@ -237,7 +282,24 @@ Request body(application/json) :
         4
       ]
     ]
-  }
+  },
+  "properties": {
+    "name": "car1",
+    "state": "test1",
+    "video": "http://www.opengis.net/spec/movingfeatures/json/1.0/prism/example/video.mpeg"
+  },
+  "bbox": [
+    139.757083,
+    35.627483,
+    0,
+    139.757716,
+    35.627701,
+    4.5
+  ],
+  "time": [
+    "2011-07-14T22:00:00Z",
+    "2011-07-15T23:00:00Z"
+  ]
 }
 
 ```
@@ -252,12 +314,6 @@ Request body(application/json) :
 ```json
 {
   "type": "Feature",
-  "id": "mf-1",
-  "properties": {
-    "name": "car1",
-    "state": "test1",
-    "video": "http://.../example/video.mpeg"
-  },
   "crs": {
     "type": "Name",
     "properties": {
@@ -267,18 +323,18 @@ Request body(application/json) :
   "trs": {
     "type": "Link",
     "properties": {
-      "type": "ogcdef",
+      "type": "OGCDEF",
       "href": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
     }
   },
   "temporalGeometry": {
     "type": "MovingPoint",
     "datetimes": [
-      "2012-07-14T22:10:00Z",
-      "2012-07-14T22:20:00Z",
-      "2012-07-14T22:30:00Z",
-      "2012-07-14T23:00:00Z",
-      "2012-07-14T23:50:00Z"
+      "2012-07-14T22:01:01Z",
+      "2012-07-14T22:01:02Z",
+      "2012-07-14T22:01:03Z",
+      "2012-07-14T22:01:04Z",
+      "2012-07-14T22:01:05Z"
     ],
     "coordinates": [
       [
@@ -310,7 +366,7 @@ Request body(application/json) :
     "interpolation": "Linear",
     "base": {
       "type": "glTF",
-      "href": "http://.../example/car3dmodel.gltf"
+      "href": "http://www.opengis.net/spec/movingfeatures/json/1.0/prism/example/car3dmodel.gltf"
     },
     "orientations": [
       {
@@ -375,6 +431,57 @@ Request body(application/json) :
       }
     ]
   },
+  "temporalProperties": [
+    {
+      "datetimes": [
+        "2011-07-14T22:01:01.450Z",
+        "2011-07-14T23:01:01.450Z",
+        "2011-07-15T00:01:01.450Z"
+      ],
+      "length": {
+        "type": "Measure",
+        "form": "http://www.qudt.org/qudt/owl/1.0.0/quantity/Length",
+        "values": [
+          1,
+          2.4,
+          1
+        ],
+        "interpolation": "Linear"
+      },
+      "discharge": {
+        "type": "Measure",
+        "form": "MQS",
+        "values": [
+          3,
+          4,
+          5
+        ],
+        "interpolation": "Step"
+      }
+    },
+    {
+      "datetimes": [
+        1465621816590,
+        1465711526300
+      ],
+      "camera": {
+        "type": "Image",
+        "values": [
+          "http://www.opengis.net/spec/movingfeatures/json/1.0/prism/example/image1",
+          "iVBORw0KGgoAAAANSUhEU......"
+        ],
+        "interpolation": "Discrete"
+      },
+      "labels": {
+        "type": "Text",
+        "values": [
+          "car",
+          "human"
+        ],
+        "interpolation": "Discrete"
+      }
+    }
+  ],
   "geometry": {
     "type": "LineString",
     "coordinates": [
@@ -404,7 +511,24 @@ Request body(application/json) :
         4
       ]
     ]
-  }
+  },
+  "properties": {
+    "name": "car1",
+    "state": "test1",
+    "video": "http://www.opengis.net/spec/movingfeatures/json/1.0/prism/example/video.mpeg"
+  },
+  "bbox": [
+    138.757083,
+    34.627483,
+    0,
+    138.757716,
+    34.627701,
+    4.5
+  ],
+  "time": [
+    "2012-07-14T22:00:00Z",
+    "2012-07-15T23:00:00Z"
+  ]
 }
 
 ```
@@ -428,7 +552,10 @@ subTrajectory : --
 #### **[GET]** Moving Features (/collections/{collectionId}/items)
 collectionID : ID of the response at the time of **Moving Feature Collection**
 
-bbox : xxxx
+bbox : ```138.757083```
+       ```34.627483```
+       ```138.757716```
+       ```34.627701```
 
 datetime : Empty
 
@@ -442,7 +569,7 @@ collectionID : ID of the response at the time of **Moving Feature Collection**
 
 bbox : Empty
 
-datetime : 2011-07-14T22:15:00.000Z/2011-07-14T23:15:00.000Z
+datetime : ```2011-07-14T22:15:00.000Z/2011-07-14T23:15:00.000Z```
 
 limit : 10
 
