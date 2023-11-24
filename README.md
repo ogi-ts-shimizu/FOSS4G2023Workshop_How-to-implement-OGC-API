@@ -101,11 +101,11 @@ Request body(application/json) :
   "temporalGeometry": {
     "type": "MovingPoint",
     "datetimes": [
-      "2011-07-14T22:01:01Z",
-      "2011-07-14T22:01:02Z",
-      "2011-07-14T22:01:03Z",
-      "2011-07-14T22:01:04Z",
-      "2011-07-14T22:01:05Z"
+      "2011-08-14T22:01:01Z",
+      "2011-08-14T22:01:02Z",
+      "2011-08-14T22:01:03Z",
+      "2011-08-14T22:01:04Z",
+      "2011-08-14T22:01:05Z"
     ],
     "coordinates": [
       [
@@ -205,9 +205,9 @@ Request body(application/json) :
   "temporalProperties": [
     {
       "datetimes": [
-        "2011-07-14T22:01:01.450Z",
-        "2011-07-14T23:01:01.450Z",
-        "2011-07-15T00:01:01.450Z"
+        "2011-08-14T22:01:01.450Z",
+        "2011-08-14T23:01:01.450Z",
+        "2011-08-15T00:01:01.450Z"
       ],
       "length": {
         "type": "Measure",
@@ -297,8 +297,8 @@ Request body(application/json) :
     4.5
   ],
   "time": [
-    "2011-07-14T22:00:00Z",
-    "2011-07-15T23:00:00Z"
+    "2011-08-14T22:00:00Z",
+    "2011-08-15T23:00:00Z"
   ]
 }
 
@@ -541,7 +541,7 @@ collectionID : ID of the response at the time of **Moving Feature Collection**
 
 bbox : Empty
 
-datetime : ```2011-07-14T22:20:00.000Z```
+datetime : ```2011-08-14T22:20:00.000Z```
 
 limit : 10
 
@@ -569,7 +569,7 @@ collectionID : ID of the response at the time of **Moving Feature Collection**
 
 bbox : Empty
 
-datetime : ```2011-07-14T22:15:00.000Z/2011-07-14T23:15:00.000Z```
+datetime : ```2011-08-14T22:15:00.000Z/2011-08-14T23:15:00.000Z```
 
 limit : 10
 
@@ -606,11 +606,26 @@ collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
 
-leaf : Empty
+leaf : ```2011-08-14T22:30:00.000Z```
 
 bbox : Empty
 
 datetime : Empty
+
+limit : 10
+
+---
+### No.10-2
+#### **[GET]** Temporal Geometry(/collections/{collectionId}/items/{mFeatureId}/tGeometries)
+collectionId : ID of the response at the time of **Moving Feature Collection**
+
+mFeatureId : ID of the response at the time of **Moving Features**
+
+leaf : Empty
+
+bbox : Empty
+
+datetime : ```2011-08-14T22:15:00.000Z/2011-08-14T23:15:00.000Z```
 
 limit : 10
 
@@ -637,20 +652,10 @@ mFeatureId : ID of the response at the time of **Moving Features**
 
 Request body(application/json)  : Default Value
 
+
 ---
+
 ### No.13
-#### **[POST]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
-collectionId : ID of the response at the time of **Moving Feature Collection**
-
-mFeatureId : ID of the response at the time of **Moving Features**
-
-tPropertyName : length
-
-Request body(application/json) : Default Value
-
----
-
-### No.14
 #### **[GET]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
 collectionId : ID of the response at the time of **Moving Feature Collection**
 
@@ -663,6 +668,18 @@ leaf : Empty
 datetime : Empty
 
 limit : 10
+
+---
+### No.14
+#### **[POST]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tProperties/{tPropertyName})
+collectionId : ID of the response at the time of **Moving Feature Collection**
+
+mFeatureId : ID of the response at the time of **Moving Features**
+
+tPropertyName : length
+
+Request body(application/json) : Default Value
+
 
 ---
 ### No.15
