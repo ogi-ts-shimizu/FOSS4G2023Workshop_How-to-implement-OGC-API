@@ -615,7 +615,7 @@ leaf : ```2011-08-14T22:30:00Z```
 
 bbox : Empty
 
-datetime : Empty
+datetime : ```2010-01-01T00:00:00Z/..```
 
 limit : 10
 
@@ -675,7 +675,7 @@ tPropertyName : length
 
 leaf : Empty
 
-datetime : ```2011-08-14T22:15:00Z/2011-08-14T23:15:00Z```
+datetime : ```2011-08-14T22:15:00Z/2011-08-14T22:55:00Z```
 
 limit : 10
 
@@ -694,7 +694,7 @@ tPropertyName : length
 
 leaf : Empty
 
-datetime :  Empty
+datetime :  ```2010-01-01T00:00:00Z/..```
 
 limit : 10
 
@@ -709,8 +709,23 @@ mFeatureId : ID of the response at the time of **Moving Features**
 
 tPropertyName : length
 
-Request body(application/json) : Default Value
+Request body(application/json) : 
 
+```json
+{
+  "datetimes": [
+    "2011-12-15T08:00:00Z",
+    "2011-12-15T08:10:00Z",
+    "2011-12-15T08:20:00Z"
+  ],
+  "values": [
+    0,
+    20,
+    50
+  ],
+  "interpolation": "Linear"
+}
+```
 
 ---
 ### No.16
