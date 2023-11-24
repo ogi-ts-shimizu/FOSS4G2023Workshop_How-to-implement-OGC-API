@@ -660,7 +660,63 @@ collectionId : ID of the response at the time of **Moving Feature Collection**
 
 mFeatureId : ID of the response at the time of **Moving Features**
 
-Request body(application/json)  : Default Value
+Request body(application/json)  : 
+```json
+{
+  "temporalProperties": [
+    {
+      "datetimes": [
+        "2015-07-14T22:01:01.450Z",
+        "2015-07-14T23:01:01.450Z",
+        "2015-07-15T00:01:01.450Z"
+      ],
+      "length": {
+        "type": "Measure",
+        "form": "http://www.qudt.org/qudt/owl/1.0.0/quantity/Length",
+        "values": [
+          1,
+          2.4,
+          1
+        ],
+        "interpolation": "Linear"
+      },
+      "discharge": {
+        "type": "Measure",
+        "form": "MQS",
+        "values": [
+          3,
+          4,
+          5
+        ],
+        "interpolation": "Step"
+      }
+    },
+    {
+      "datetimes": [
+        1465621836590,
+        1465711536300
+      ],
+      "camera": {
+        "type": "Image",
+        "values": [
+          "http://www.opengis.net/spec/movingfeatures/json/1.0/prism/example/image1",
+          "iVBORw0KGgoAAAANSUhEU......"
+        ],
+        "interpolation": "Discrete"
+      },
+      "labels": {
+        "type": "Text",
+        "values": [
+          "car",
+          "human"
+        ],
+        "interpolation": "Discrete"
+      }
+    }
+  ]
+}
+
+```
 
 
 ---
