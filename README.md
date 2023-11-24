@@ -572,7 +572,7 @@ collectionID : ID of the response at the time of **Moving Feature Collection**
 
 bbox : Empty
 
-datetime : ```2011-08-14T22:15:00Z/2011-08-14T23:15:00Z```
+datetime : ```2011-08-14T22:15:00Z/2011-08-14T22:55:00Z```
 
 limit : 10
 
