@@ -14,12 +14,12 @@ Execute the following three commands in order at the command prompt
 
 Step1
 ```bash
-docker pull ghcr.io/taehoonk/mf-api-server:1.0
+docker pull ghcr.io/taehoonk/mf-api-server:1.1
 ```
 
 Step2
 ```bash
-docker run -p 8085:8085 -p 25432:5432 -d --name mf-api-server ghcr.io/taehoonk/mf-api-server:1.0
+docker run -p 8085:8085 -p 25432:5432 -d --name mf-api-server ghcr.io/taehoonk/mf-api-server:1.1
 ```
 
 Step3
