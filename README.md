@@ -27,7 +27,7 @@ Step3
 docker exec mf-api-server ./run.sh
 ```
 ---
-## <10 mins> A brief explanation of MobilityDB and the functions (and structure) used to handle temporal geometry and properties.
+## <10 mins> A brief explanation of MobilityDB and the functions (and structure) used to handle TemporalGeometry and properties.
 > [!NOTE] 
 > * There are no commands or data to use.
 ---
@@ -37,9 +37,9 @@ docker exec mf-api-server ./run.sh
 > * There are no commands or data to use.
 ---
 ## <30 mins> Verify that each API works properly using Swagger
-## Moving Feature Collection
+## MovingFeatureCollection
 ### No.1
-#### **[POST]** Moving Feature Collection
+#### **[POST]** MovingFeatureCollection
 
 Request body(application/json)
 ```json
@@ -51,14 +51,14 @@ Request body(application/json)
 ```
 ---
 ### No.2
-#### **[GET]** Moving Feature Collection
+#### **[GET]** MovingFeatureCollection
 collectionID
 > [!NOTE] 
 > * The last part of `location` link when POST response
 ![image](https://github.com/ogi-ts-shimizu/FOSS4G2023Workshop_How-to-implement-OGC-API/assets/120169253/934a7555-a796-4289-a7bf-a18d4c962204)
 ---
 ### No.3
-#### **[PUT]** Moving Feature Collection
+#### **[PUT]** MovingFeatureCollection
 collectionID : The last part of `location` link when POST response
 
 Request body(application/json)
@@ -71,15 +71,15 @@ Request body(application/json)
 ```
 ---
 ### No.4
-#### **[DELETE]** Moving Feature Collection
+#### **[DELETE]** MovingFeatureCollection
 > [!NOTE] 
 > Skip the DELETE request for the next demonstration
 
 ---
-## Moving Feature
+## MovingFeature
 ### No.5
-#### **[POST]** Moving Features
-collectionID : ID of the response at the time of **Moving Feature Collection**
+#### **[POST]** MovingFeatures
+collectionID : ID of the response at the time of **MovingFeatureCollection**
 
 Request body(application/json) : 
 ```json
@@ -307,8 +307,8 @@ Request body(application/json) :
 ---
 
 ### No.5-2
-#### **[POST]** Moving Features
-collectionID : ID of the response at the time of **Moving Feature Collection**
+#### **[POST]** MovingFeatures
+collectionID : ID of the response at the time of **MovingFeatureCollection**
 
 Request body(application/json) : 
 ```json
@@ -536,8 +536,8 @@ Request body(application/json) :
 ---
 
 ### No.6
-#### **[GET]** Moving Features (/collections/{collectionId}/items)
-collectionID : ID of the response at the time of **Moving Feature Collection**
+#### **[GET]** MovingFeatures (/collections/{collectionId}/items)
+collectionID : ID of the response at the time of **MovingFeatureCollection**
 
 bbox : Empty
 
@@ -549,8 +549,8 @@ subTrajectory : --
 
 ---
 ### No.6-2
-#### **[GET]** Moving Features (/collections/{collectionId}/items)
-collectionID : ID of the response at the time of **Moving Feature Collection**
+#### **[GET]** MovingFeatures (/collections/{collectionId}/items)
+collectionID : ID of the response at the time of **MovingFeatureCollection**
 
 bbox : ```138.757083```
        ```34.627483```
@@ -567,8 +567,8 @@ subTrajectory : --
 ---
 
 ### No.6-3
-#### **[GET]** Moving Features (/collections/{collectionId}/items)
-collectionID : ID of the response at the time of **Moving Feature Collection**
+#### **[GET]** MovingFeatures (/collections/{collectionId}/items)
+collectionID : ID of the response at the time of **MovingFeatureCollection**
 
 bbox : Empty
 
@@ -581,35 +581,35 @@ subTrajectory : true
 ---
 
 ### No.7
-#### **[GET]** Moving Features (/collections/{collectionId}/items/{mFeatureId})
-collectionId : ID of the response at the time of **Moving Feature Collection**
+#### **[GET]** MovingFeatures (/collections/{collectionId}/items/{mFeatureId})
+collectionId : ID of the response at the time of **MovingFeatureCollection**
 
-mFeatureId : ID of the response at the time of **Moving Feature**
+mFeatureId : ID of the response at the time of **MovingFeature**
 
 > [!NOTE]
-> The last part of `location` link when Moving Features POST response
+> The last part of `location` link when MovingFeatures POST response
 ![image](https://github.com/ogi-ts-shimizu/FOSS4G2023Workshop_How-to-implement-OGC-API/assets/120169253/c609d523-6f45-40b8-aec1-9b6903a8797f)
 ---
 ### No.8
-#### **[DELETE]** Moving Features (/collections/{collectionId}/items/{mFeatureId})
+#### **[DELETE]** MovingFeatures (/collections/{collectionId}/items/{mFeatureId})
 > [!NOTE] 
 > Skip the DELETE request for the next demonstration
 ---
 ## TemporalGeometryCollection
 ### No.9
-#### **[POST]** Temporal Geometry(/collections/{collectionId}/items/{mFeatureId}/tgsequence)
-collectionId : ID of the response at the time of **Moving Feature Collection**
+#### **[POST]** TemporalGeometry(/collections/{collectionId}/items/{mFeatureId}/tgsequence)
+collectionId : ID of the response at the time of **MovingFeatureCollection**
 
-mFeatureId : ID of the response at the time of **Moving Features**
+mFeatureId : ID of the response at the time of **MovingFeatures**
 
 Request body(application/json) : **Default Value**
 
 ---
 ### No.10
-#### **[GET]** Temporal Geometry(/collections/{collectionId}/items/{mFeatureId}/tGeometries)
-collectionId : ID of the response at the time of **Moving Feature Collection**
+#### **[GET]** TemporalGeometry(/collections/{collectionId}/items/{mFeatureId}/tgsequence)
+collectionId : ID of the response at the time of **MovingFeatureCollection**
 
-mFeatureId : ID of the response at the time of **Moving Features**
+mFeatureId : ID of the response at the time of **MovingFeatures**
 
 leaf : ```2011-08-14T22:30:00Z```
 
@@ -621,10 +621,10 @@ limit : 10
 
 ---
 ### No.10-2
-#### **[GET]** Temporal Geometry(/collections/{collectionId}/items/{mFeatureId}/tGeometries)
-collectionId : ID of the response at the time of **Moving Feature Collection**
+#### **[GET]** TemporalGeometry(/collections/{collectionId}/items/{mFeatureId}/tgsequence)
+collectionId : ID of the response at the time of **MovingFeatureCollection**
 
-mFeatureId : ID of the response at the time of **Moving Features**
+mFeatureId : ID of the response at the time of **MovingFeatures**
 
 leaf : Empty
 
@@ -638,10 +638,10 @@ subTrajectory : true
 
 ---
 ### No.11
-#### **[DELETE]** Temporal Geometry(/collections/{collectionId}/items/{mFeatureId}/tGeometries/{tGeometryId})
-collectionId : ID of the response at the time of **Moving Feature Collection**
+#### **[DELETE]** TemporalGeometry(/collections/{collectionId}/items/{mFeatureId}/tgsequence/{tGeometryId})
+collectionId : ID of the response at the time of **MovingFeatureCollection**
 
-mFeatureId : ID of the response at the time of **Moving Features**
+mFeatureId : ID of the response at the time of **MovingFeatures**
 
 tGeometryId : ID of the response at the time of **TemporalGeometry**
 
@@ -653,12 +653,12 @@ tGeometryId : ID of the response at the time of **TemporalGeometry**
 
 
 ---
-## TemporalPropertyCollection
+## TemporalProperties
 ### No.12
-#### **[POST]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tproperties)
-collectionId : ID of the response at the time of **Moving Feature Collection**
+#### **[POST]** TemporalProperties(/collections/{collectionId}/items/{mFeatureId}/tproperties)
+collectionId : ID of the response at the time of **MovingFeatureCollection**
 
-mFeatureId : ID of the response at the time of **Moving Features**
+mFeatureId : ID of the response at the time of **MovingFeatures**
 
 Request body(application/json)  : 
 ```json
@@ -722,10 +722,10 @@ Request body(application/json)  :
 ---
 
 ### No.13
-#### **[GET]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tproperties/)
-collectionId : ID of the response at the time of **Moving Feature Collection**
+#### **[GET]** TemporalProperties(/collections/{collectionId}/items/{mFeatureId}/tproperties/)
+collectionId : ID of the response at the time of **MovingFeatureCollection**
 
-mFeatureId : ID of the response at the time of **Moving Features**
+mFeatureId : ID of the response at the time of **MovingFeatures**
 
 
 leaf : Empty
@@ -740,10 +740,10 @@ subTemporalValue : true
 
 
 ### No.14
-#### **[GET]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tproperties/{tPropertyName})
-collectionId : ID of the response at the time of **Moving Feature Collection**
+#### **[GET]** TemporalProperty(/collections/{collectionId}/items/{mFeatureId}/tproperties/{tPropertyName})
+collectionId : ID of the response at the time of **MovingFeatureCollection**
 
-mFeatureId : ID of the response at the time of **Moving Features**
+mFeatureId : ID of the response at the time of **MovingFeatures**
 
 tPropertyName : length
 
@@ -756,10 +756,10 @@ subTemporalValue : true
 
 ---
 ### No.15
-#### **[POST]** Temporal Property (/collections/{collectionId}/items/{mFeatureId}/tproperties/{tPropertyName})
-collectionId : ID of the response at the time of **Moving Feature Collection**
+#### **[POST]** TemporalProperty(/collections/{collectionId}/items/{mFeatureId}/tproperties/{tPropertyName})
+collectionId : ID of the response at the time of **MovingFeatureCollection**
 
-mFeatureId : ID of the response at the time of **Moving Features**
+mFeatureId : ID of the response at the time of **MovingFeatures**
 
 tPropertyName : length
 
@@ -783,10 +783,10 @@ Request body(application/json) :
 
 ---
 ### No.16
-#### **[DELETE]** Temporal Property(/collections/{collectionId}/items/{mFeatureId}/tproperties/{tPropertyName})
-collectionId : ID of the response at the time of **Moving Feature Collection**
+#### **[DELETE]** TemporalProperty(/collections/{collectionId}/items/{mFeatureId}/tproperties/{tPropertyName})
+collectionId : ID of the response at the time of **MovingFeatureCollection**
 
-mFeatureId : ID of the response at the time of **Moving Features**
+mFeatureId : ID of the response at the time of **MovingFeatures**
 
 tPropertyName : length
 
@@ -796,7 +796,7 @@ tPropertyName : length
 MF-API Server based on pygeoapi
  https://github.com/aistairc/mf-api
 
-OGC API – Moving Features official GitHub repository
+OGC API – MovingFeatures official GitHub repository
  https://github.com/opengeospatial/ogcapi-movingfeatures
 
 MobilityDB (and its Python driver, PyMEOS, and MEOS)
